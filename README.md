@@ -10,4 +10,4 @@ The automated trading system used in this project is protected by copy rights an
 
 Currently we have use the index ETF 510050 in China fund market as a test bed for learning how to trade with simple double SMA strategy.
 
-For more information, please check our the [documentations]().
+For more information, please check our the [documentations](https://dryangfintech2018.readthedocs.io/en/latest/).
