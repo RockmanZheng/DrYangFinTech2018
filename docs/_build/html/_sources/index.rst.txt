@@ -5,14 +5,13 @@
 
 Welcome to DrYangFinTech2018's documentation!
 =============================================
+Financial Technology Project Directed by Dr. Yang, 2018
 
 .. toctree::
     :maxdepth: 1
 
     log/research/log_index
     log/change/log_index
-
-Financial Technology Project Directed by Dr. Yang, 2018
 
 I joined this project in the spring of 2018. There are roughly 8 members taking part in this project. All of them are undergraduate but from different disciplines, including math, finance, management, physics, etc. Our director, Dr. Yang, is a professional in the quantitative trading field, who had been working in Wall Street and Hong Kong for over 2 decades.
 
