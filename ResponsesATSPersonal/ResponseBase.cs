@@ -23,7 +23,7 @@ namespace ResponsesATSPersonal
     /// <summary>
     /// 进一步将 Response 封装起来，只将初始化和策略编写交给外部
     /// </summary>
-    public class ResponseBase : ResponseTemplateBasePub,ResponseInterface
+    public class ResponseBase : ResponseTemplateBasePub, ResponseInterface
     {
         // Determining whether we are enabling prompting of system parameters to user
         // when "_black" is "false", meaning enabled prompting
@@ -93,7 +93,7 @@ namespace ResponsesATSPersonal
                 throw new KeyNotFoundException("Indicator " + name + " haven't been added to record.");
             }
         }
-        
+
         string[] GetDisplayIndicators()
         {
             List<string> indicators = new List<string>();
@@ -183,6 +183,7 @@ namespace ResponsesATSPersonal
         public virtual void ComputeSignal() { }
         public virtual void DoStrategy() { }
         public virtual void ResetIndicators() { }
+        public virtual void LocalReset() { }
 
         /// <summary>
         /// This method will be delegated in constructor method "SMARSIResponsePub(bool prompt)" to "_active" tracker
@@ -261,6 +262,7 @@ namespace ResponsesATSPersonal
             _pt.Clear();
 
             ResetIndicators();
+            LocalReset();
         }
 
 
@@ -293,7 +295,7 @@ namespace ResponsesATSPersonal
         /// <param name="symbol"></param>
         /// <param name="tOther"></param>
         /// <param name="message"></param>
-        protected void Buy(string symbol, decimal signal=0, string message = null)
+        protected void Buy(string symbol, decimal signal = 0, string message = null)
         {
             Tick tOther = _kt[symbol];
 
@@ -312,7 +314,7 @@ namespace ResponsesATSPersonal
             // wait for fill
             _wait[symbol] = true;
         }
-        protected void SellStop(string symbol, decimal signal=0, string message = null)
+        protected void SellStop(string symbol, decimal signal = 0, string message = null)
         {
             Tick tOther = _kt[symbol];
 
@@ -339,7 +341,7 @@ namespace ResponsesATSPersonal
         /// <param name="symbol"></param>
         /// <param name="tOther"></param>
         /// <param name="message"></param>
-        protected void Sell(string symbol, decimal signal=0, string message = null)
+        protected void Sell(string symbol, decimal signal = 0, string message = null)
         {
             Tick tOther = _kt[symbol];
 
@@ -443,9 +445,9 @@ namespace ResponsesATSPersonal
         public override void GotTick(Tick k)
         {
             // Sync symbols
-            if(_symbols.getindex(k.symbol)<0)
+            if (_symbols.getindex(k.symbol) < 0)
             {
-                _symbols.addindex(k.symbol,k.symbol);
+                _symbols.addindex(k.symbol, k.symbol);
             }
 
             SyncDateTime(k);

@@ -141,6 +141,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ATRResponsePub.cs" />
+    <Compile Include="DSMAWithStopLossIntraday2.cs" />
+    <Compile Include="DSMAWithStopLossIntraday.cs" />
     <Compile Include="DoubleSMAWithStopLoss3.cs" />
     <Compile Include="DoubleSMA2WithStopLoss.cs" />
     <Compile Include="DoubleSMA2.cs" />

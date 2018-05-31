@@ -11,5 +11,6 @@ namespace ResponsesATSPersonal
         void ComputeSignal();
         void DoStrategy();
         void ResetIndicators();
+        void LocalReset();
     }
 }
