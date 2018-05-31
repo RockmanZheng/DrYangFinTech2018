@@ -7,10 +7,10 @@ Welcome to DrYangFinTech2018's documentation!
 =============================================
 
 .. toctree::
-	:maxdepth: 1
+    :maxdepth: 1
 
-	log/research/log_index
-	log/change/log_index
+    log/research/log_index
+    log/change/log_index
 
 Financial Technology Project Directed by Dr. Yang, 2018
 
