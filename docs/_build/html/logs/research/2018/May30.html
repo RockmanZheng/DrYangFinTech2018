@@ -1,0 +1,373 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Wed 30 May 2018 &mdash; DrYangFinTech2018  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Thu 31 May 2018" href="May31.html" />
+    <link rel="prev" title="Tue 29 May 2018" href="May29.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> DrYangFinTech2018
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../log_index.html">Research Log</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="May29.html">Tue 29 May 2018</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Wed 30 May 2018</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-trade-intradaily">How To Trade Intradaily</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#experiments-and-coding">Experiments and Coding</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#intraday-trading-experiment-01">Intraday Trading - Experiment 01</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#intraday-trading-experiment-02">Intraday Trading - Experiment 02</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#intraday-trading-experiment-03">Intraday Trading - Experiment 03</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="May31.html">Thu 31 May 2018</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../change/log_index.html">Change Log</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">DrYangFinTech2018</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../log_index.html">Research Log</a> &raquo;</li>
+        
+      <li>Wed 30 May 2018</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/logs/research/2018/May30.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="wed-30-may-2018">
+<h1>Wed 30 May 2018<a class="headerlink" href="#wed-30-may-2018" title="Permalink to this headline">¶</a></h1>
+<p>This morning I had a discussion with Jia Yang about how 510050 is traded. He told me that the tick data that we collected about 510050 was from some secondary market, where 510050 is traded just like stock. What I had found yesterday in this article <a class="reference internal" href="May29.html"><span class="doc">Tue 29 May 2018</span></a>, only applies to primary market, that is, only valid if we are trading directly with fund company. In secondary market, we trade this fund like a stock with other traders on an exchange platform for instance.</p>
+<p>Using the terms in yesterday’s doc, trades are confirmed in T+0 way in secondary market. In other words, if you buy 1 share of 510050 in this market on T day, it is confirmed right away, but only allows to be sold on T+1 day. Just to compare, in primary market, you apply for buying 1 share of 510050 on T day, the fund company confirms it on T+1 day, thus you are only allowed to sell it after T+2 day inclusively.</p>
+<div class="section" id="how-to-trade-intradaily">
+<h2>How To Trade Intradaily<a class="headerlink" href="#how-to-trade-intradaily" title="Permalink to this headline">¶</a></h2>
+<p>In order to facilitate intraday trading, we need a little trick. On the first day we enter market, we buy 1 share of 510050 as our bottom position, and hold it for 1 day (no selling this day). Under the assumption that we only buy or sell at most 1 share and no shorting is permitted, in later trading day we could perform buying and selling in intraday way. This is because everytime we sell 1 share, we are selling the one bought on some earlier day, which is legitamate.</p>
+<p>So if we set bottom position as 1 share, and only buy or sell 1 share each time, we can at most sell 1 time a day. On the contrary, buying times in unlimited.</p>
+</div>
+<div class="section" id="experiments-and-coding">
+<h2>Experiments and Coding<a class="headerlink" href="#experiments-and-coding" title="Permalink to this headline">¶</a></h2>
+<p>I am going to perfrom 2 sets of experiments. One for intraday trading and the other on for interday trading. Then we are going to compare the results.</p>
+<div class="section" id="intraday-trading-experiment-01">
+<h3>Intraday Trading - Experiment 01<a class="headerlink" href="#intraday-trading-experiment-01" title="Permalink to this headline">¶</a></h3>
+<p><strong>Coding</strong></p>
+<ul class="simple">
+<li>Made a copy of <em>ResponsesATSPersonal/DoubleSMA2WithStopLoss.cs</em> and change it into <em>ResponsesATSPersonal/DSMAWithStopLossIntraday.cs</em>.</li>
+<li>Added boolean variable <code class="docutils literal notranslate"><span class="pre">_isOpenBottomPosition</span></code> to indicate whether we have open bottom position yet, which is initialized as <code class="docutils literal notranslate"><span class="pre">false</span></code>.</li>
+<li>Added integer variable <code class="docutils literal notranslate"><span class="pre">_openBottomPositionDate</span></code> to record the date we open bottom position.</li>
+<li>Added integer variable <code class="docutils literal notranslate"><span class="pre">_lastSellDate</span></code> to record the date last time we sell. So that we can limit sell times to 1 each day.</li>
+<li>In <code class="docutils literal notranslate"><span class="pre">DoStrategy</span></code> method, added 2 judge statements to facilitate opening bottom position on the first day we enter market.</li>
+<li>In <code class="docutils literal notranslate"><span class="pre">DoStrategy</span></code> method, we classify <code class="docutils literal notranslate"><span class="pre">position==1</span></code> as flat position, as we should not touch the bottom position if we want to perform intraday trading.</li>
+<li>Fixed bug about resetting. In <em>ResponsesATSPersonal/ResponseInterface.cs</em> added interface <code class="docutils literal notranslate"><span class="pre">LocalReset</span></code>, and add corresponding abstract function in <em>ResponsesATSPersonal/ResponseBase.cs</em>, and call it in <code class="docutils literal notranslate"><span class="pre">Reset</span></code> method.</li>
+<li>Added <code class="docutils literal notranslate"><span class="pre">LocalRest</span></code> method in <em>ResponsesATSPersonal/DSMAWithStopLossIntraday.cs</em> to perform resetting work.</li>
+</ul>
+<p><strong>Parameters Control</strong></p>
+<ul class="simple">
+<li>Made copies of <em>ControlParam/Control510050DoubleSMA2WithStopLoss.csv</em> and <em>ControlParam/OptParam510050DoubleSMA2WithStopLoss.csv</em> and change them into <em>ControlParam/Control510050DSMAWithStopLossIntraday.csv</em> and <em>ControlParam/OptParam510050DSMAWithStopLossIntraday.csv</em>.</li>
+<li>In <em>ControlParam/Control510050DSMAWithStopLossIntraday.csv</em>, changed values under <code class="docutils literal notranslate"><span class="pre">responsename</span></code> into <code class="docutils literal notranslate"><span class="pre">ResponsesATSPersonal.DSMAWithStopLossIntradayAuto</span></code>, values under <code class="docutils literal notranslate"><span class="pre">runparamfile</span></code> into <code class="docutils literal notranslate"><span class="pre">OptParam510050DSMAWithStopLossIntraday.csv</span></code>, so that we can use strategy created above when running <em>ATSTestBenchBatch.exe</em></li>
+</ul>
+<p><strong>Experiment Setup</strong></p>
+<p>Date Range:</p>
+<ul class="simple">
+<li>Train: 15 Sep 2015 to 15 Sep 2016</li>
+<li>Test: 15 Sep 2016 to 15 Sep 2017</li>
+</ul>
+<p>Hyperparameters (as in <em>ControlParam/OptParam510050DSMAWithStopLossIntraday.csv</em>):</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">popsize</span></code>: 25</li>
+<li><code class="docutils literal notranslate"><span class="pre">maxgen</span></code>: 25</li>
+<li><code class="docutils literal notranslate"><span class="pre">LossTolerance</span></code>: 0.01~1</li>
+<li><code class="docutils literal notranslate"><span class="pre">FastSMAPeriod</span></code>: 1~120</li>
+<li><code class="docutils literal notranslate"><span class="pre">PeriodDiff</span></code>: 1~120</li>
+</ul>
+<p><strong>Steps</strong></p>
+<ul class="simple">
+<li>We copy all trades into Excel. Calculate cash we currently have and shares we hold.</li>
+</ul>
+<p><strong>Results</strong></p>
+<p>Optimized Parameters:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">LossTolerance</span></code>: 0.8253 [%]</li>
+<li><code class="docutils literal notranslate"><span class="pre">FastSMAPeriod</span></code>: 53 [bar]</li>
+<li><code class="docutils literal notranslate"><span class="pre">PeriodDiff</span></code>: 62 [bar]</li>
+</ul>
+<p><em>Note</em>: We group 60 ticks into 1 bar.</p>
+<p>Performance on 510050 (train):</p>
+<ul class="simple">
+<li>GrossPL: 0.549</li>
+<li>AvgPerTrade: 0.002</li>
+<li>SharpeRatio: 1.5</li>
+<li>MaxDDVal: -0.677</li>
+</ul>
+<p>Performance on 510050 (test):</p>
+<ul class="simple">
+<li>GrossPL: 0.398</li>
+<li>AvgPerTrade: 0.005</li>
+<li>MaxDDVal: -0.091</li>
+<li>Trades: 75</li>
+<li>SharpeRatio: 4.9</li>
+<li>SortinoRatio: 17</li>
+</ul>
+<p>Question: Why is performance on test set better than train set?</p>
+</div>
+<div class="section" id="intraday-trading-experiment-02">
+<h3>Intraday Trading - Experiment 02<a class="headerlink" href="#intraday-trading-experiment-02" title="Permalink to this headline">¶</a></h3>
+<p>From calculation in Excel, we found out each time we start a new backtest, the system is reset, and it will open a new bottom position. We do not want to see it accumulatingly create bottom position. So to amend this, we just drop this step, simply assuming we do have bottom position, but not realizing it in our coding:</p>
+<p><strong>Coding</strong></p>
+<ul class="simple">
+<li>Made a copy of <em>ResponsesATSPersonal/DSMAWithStopLossIntraday.cs</em> and change it into <em>ResponsesATSPersonal/DSMAWithStopLossIntraday2.cs</em>.</li>
+<li>Deleted anything related to bottom position mechanism.</li>
+</ul>
+<p><strong>Parameters Control</strong></p>
+<ul class="simple">
+<li>Made copies of <em>ControlParam/Control510050DSMAWithStopLossIntraday.csv</em> and <em>ControlParam/OptParam510050DSMAWithStopLossIntraday.csv</em> and change them into <em>ControlParam/Control510050DSMAWithStopLossIntraday2.csv</em> and <em>ControlParam/OptParam510050DSMAWithStopLossIntraday2.csv</em>.</li>
+<li>In <em>ControlParam/Control510050DSMAWithStopLossIntraday2.csv</em>, changed values under <code class="docutils literal notranslate"><span class="pre">responsename</span></code> into <code class="docutils literal notranslate"><span class="pre">ResponsesATSPersonal.DSMAWithStopLossIntraday2Auto</span></code>, values under <code class="docutils literal notranslate"><span class="pre">runparamfile</span></code> into <code class="docutils literal notranslate"><span class="pre">OptParam510050DSMAWithStopLossIntraday2.csv</span></code>, so that we can use strategy created above when running <em>ATSTestBenchBatch.exe</em></li>
+</ul>
+<p><strong>Experiment Setup</strong></p>
+<p>Date Range:</p>
+<ul class="simple">
+<li>Train: 15 Sep 2015 to 15 Sep 2016</li>
+<li>Test: 15 Sep 2016 to 15 Sep 2017</li>
+</ul>
+<p>Hyperparameters (as in <em>ControlParam/OptParam510050DSMAWithStopLossIntraday2.csv</em>):</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">popsize</span></code>: 25</li>
+<li><code class="docutils literal notranslate"><span class="pre">maxgen</span></code>: 25</li>
+<li><code class="docutils literal notranslate"><span class="pre">LossTolerance</span></code>: 0.01~1</li>
+<li><code class="docutils literal notranslate"><span class="pre">FastSMAPeriod</span></code>: 1~120</li>
+<li><code class="docutils literal notranslate"><span class="pre">PeriodDiff</span></code>: 1~120</li>
+</ul>
+<p><strong>Basic Results</strong></p>
+<p>Optimized Parameters:</p>
+<ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">LossTolerance</span></code>: 0.88 [%]</li>
+<li><code class="docutils literal notranslate"><span class="pre">FastSMAPeriod</span></code>: 31 [bar]</li>
+<li><code class="docutils literal notranslate"><span class="pre">PeriodDiff</span></code>: 45 [bar]</li>
+</ul>
+<p><em>Note</em>: We group 60 ticks into 1 bar.</p>
+<p>Performance on 510050 (train):</p>
+<ul class="simple">
+<li>GrossPL: 0.54</li>
+<li>AvgPerTrade: 0.002</li>
+<li>SharpeRatio: 1.8</li>
+<li>MaxDDVal: -0.168</li>
+</ul>
+<p>Performance on 510050 (test):</p>
+<ul class="simple">
+<li>GrossPL: 0.161</li>
+<li>AvgPerTrade: 0.002</li>
+<li>SharpeRatio: 2.5</li>
+<li>MaxDDVal: -0.077</li>
+<li>Trades: 70</li>
+<li>SortinoRatio: 8.6</li>
+</ul>
+<p><strong>Analysis Steps and Results</strong></p>
+<p>First we need to confirm the validity of calibration results. We run <em>ATSTestBench.exe</em> and load the same date range of data and the same strategy. In <em>Results</em> panel we will check its consistency with figures given in <em>ATSTestBenchBatch.exe</em> run earlier. The result is OK.</p>
+<p>Then we need to validate the backtesting results in similar approach. Also no problem.</p>
+<p>We then need to further look at the equity curves of calibration and backtesting. A rough equity curve of backtesing is already given by <em>ATSTestBenchBatch.exe</em> in its <em>Equity</em> panel. But we want to plot our own curves with other tools to verify and manipulate them. Plus they are not so hard to plot ourselves.</p>
+</div>
+<div class="section" id="intraday-trading-experiment-03">
+<h3>Intraday Trading - Experiment 03<a class="headerlink" href="#intraday-trading-experiment-03" title="Permalink to this headline">¶</a></h3>
+<p>I suddenly found out that I have been using <em>ATSTestBenchBatch.exe</em> in the wrong way. For newcomer of this project, you should check out the demonstration video <em>Demo/TVVideo/8. TestBenchBatch_Forward Test Demo.tvs</em> to better learn how to use it. For outsider, you can learn the concept of forward testing on this <a class="reference external" href="http://www.amibroker.com/guide/h_walkforward.html">website</a>.</p>
+<p>So now after a few experiments, I decided to make the system do calibration on 8-month basis, and do forward testing on 2-month basis. More specifically, I will list all calibration and forward testing circle in the following figure as:</p>
+<p>First I used rather small <code class="docutils literal notranslate"><span class="pre">popsize</span></code> and <code class="docutils literal notranslate"><span class="pre">maxgen</span></code> for initial run.</p>
+<p>The calibration and forward testing results under these parameters are visualized as:</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="May31.html" class="btn btn-neutral float-right" title="Thu 31 May 2018" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="May29.html" class="btn btn-neutral" title="Tue 29 May 2018" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, RockmanZheng.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

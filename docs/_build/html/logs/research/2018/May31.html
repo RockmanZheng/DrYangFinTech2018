@@ -1,0 +1,291 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Thu 31 May 2018 &mdash; DrYangFinTech2018  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Change Log" href="../../change/log_index.html" />
+    <link rel="prev" title="Wed 30 May 2018" href="May30.html" /> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> DrYangFinTech2018
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../log_index.html">Research Log</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="May29.html">Tue 29 May 2018</a></li>
+<li class="toctree-l2"><a class="reference internal" href="May30.html">Wed 30 May 2018</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Thu 31 May 2018</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#comparision-between-calibration-and-forward-testing">Comparision Between Calibration And Forward Testing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#young-models">Young Models</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mature-models">Mature Models</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#comparision-between-young-and-mature-models">Comparision Between Young And Mature models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#equity-curve-analysis">Equity Curve Analysis</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../change/log_index.html">Change Log</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">DrYangFinTech2018</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../log_index.html">Research Log</a> &raquo;</li>
+        
+      <li>Thu 31 May 2018</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/logs/research/2018/May31.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="thu-31-may-2018">
+<h1>Thu 31 May 2018<a class="headerlink" href="#thu-31-may-2018" title="Permalink to this headline">¶</a></h1>
+<p>Yesterday we collected a few backtesting results. We are going to visualize and analyse them here today.</p>
+<p>And we are going to perform some sensitivity analysis.</p>
+<p><strong>Note</strong>: we choose the <em>best</em> set of parameters from calibration by its resulting Sharpe ratio. This could be used to explain why some of the mature models behave badly in gross PnL but well in Sharpe ratio.</p>
+<div class="section" id="comparision-between-calibration-and-forward-testing">
+<h2>Comparision Between Calibration And Forward Testing<a class="headerlink" href="#comparision-between-calibration-and-forward-testing" title="Permalink to this headline">¶</a></h2>
+<p>We have used 2 sets of hyperparameters, i.e. <code class="docutils literal notranslate"><span class="pre">popsize=maxgen=5</span></code> and <code class="docutils literal notranslate"><span class="pre">popsize=maxgen=50</span></code>. Here we are going to compare the results of calibration and forward testing under these 2 sets of hyperparameters, separately.</p>
+<p><em>Note</em>: From now on, we will call the models trained under setting <code class="docutils literal notranslate"><span class="pre">popsize=maxgen=5</span></code> as <strong>young</strong> ones, since they are trained for relatively short time. And refer those trained under parameters <code class="docutils literal notranslate"><span class="pre">popsize=maxgen=50</span></code> as <strong>mature</strong> ones, due to their longer training time.</p>
+<p>We will be focusing on one particular objective - <em>Sharpe ratio</em>.</p>
+<div class="section" id="young-models">
+<h3>Young Models<a class="headerlink" href="#young-models" title="Permalink to this headline">¶</a></h3>
+<p>Experiments 2 and 3, corresponding date ranges</p>
+<ul class="simple">
+<li>2015/12/15 ~ 2016/12/15</li>
+<li>2016/3/15 ~ 2017/3/15</li>
+</ul>
+<p>occurred something strange: performance on test set was significantly (over 90%) better than on train set. We will further analyse what has gone wrong in matrue models.</p>
+</div>
+<div class="section" id="mature-models">
+<h3>Mature Models<a class="headerlink" href="#mature-models" title="Permalink to this headline">¶</a></h3>
+<p>Again, testing performance was significantly better than training one. We thus want to do some sensitivity analysis on parameters over this particular date range. In particular, we want to know whether the parameters learned in training step are reasonable and generalizable. So we will single out date range that was used in calibration step, that is, 2015/12/15 ~ 2016/6/15.</p>
+<p>With other 2 parameters fixed, we variated the remaining parameter a little bit, and run backtesting, to see the outcomes.</p>
+<p>The result shows that all three parameters, <code class="docutils literal notranslate"><span class="pre">LossTolerance</span></code>, <code class="docutils literal notranslate"><span class="pre">FastSMAPeriod</span></code> and <code class="docutils literal notranslate"><span class="pre">PeriodDiff</span></code> are sensitive parameters. Precisely, a little less <code class="docutils literal notranslate"><span class="pre">LossTolerance</span></code>, we will suffer a major under-performance; a little longer <code class="docutils literal notranslate"><span class="pre">FastSMAPeriod</span></code>, we will undertake huge amount of loss. Although the effects of the other side of variation are relatively smooth for both parameters.</p>
+<p>For parameter <code class="docutils literal notranslate"><span class="pre">PeriodDiff</span></code>, we have the same issue. But beside of that, we found that lowering the <code class="docutils literal notranslate"><span class="pre">PeriodDiff</span></code> will give us an extra bonus, which is something different from <code class="docutils literal notranslate"><span class="pre">LossTolerance</span></code> and <code class="docutils literal notranslate"><span class="pre">FastSMAPeriod</span></code>, as those parameters seem to have been already optimized, but <code class="docutils literal notranslate"><span class="pre">PeriodDiff</span></code> is still suboptimal.</p>
+<p>From this analysis, we could make the guess that at least during this period (2015/12/15 ~ 2016/6/15), the parameters are highly untrusted (as a small variation could lead to huge impact).</p>
+</div>
+</div>
+<div class="section" id="comparision-between-young-and-mature-models">
+<h2>Comparision Between Young And Mature models<a class="headerlink" href="#comparision-between-young-and-mature-models" title="Permalink to this headline">¶</a></h2>
+<p>Looking at the calibration results comparision plot, we see that in many cases young models could do just as good as mature ones. But in some cases, for instance, experiments 1 and 5, mature models remarkably improve young ones.</p>
+<p>But when we look at the forward test results, we found that in most cases (6 out of 7 experiments), young models perform better or at least as good as the mature ones. This may indicate that mature models are confront the <em>overfitting</em> issue. In other words, they may be <em>too mature</em>.</p>
+<p>In other to fix that, we could try some lower <code class="docutils literal notranslate"><span class="pre">popsize</span></code> and <code class="docutils literal notranslate"><span class="pre">maxgen</span></code>, so that we could train more generalizable mature models.</p>
+</div>
+<div class="section" id="equity-curve-analysis">
+<h2>Equity Curve Analysis<a class="headerlink" href="#equity-curve-analysis" title="Permalink to this headline">¶</a></h2>
+<p>As discussed above, both in young and mature models, we found something abnormal that from 2015/12/15 to 2016/12/15, the forward testing results during 2016/6/15 ~ 2016/12/15 are significantly betten than those in calibration during 2015/12/15 ~ 2016/6/15. So here we would like to further find out what has gone wrong by plotting their equity curve.</p>
+<p>We plotted equity curves for 2 date ranges:</p>
+<ul class="simple">
+<li>Calibration: 2015/12/15 ~ 2016/6/15</li>
+<li>Forward Testing: 2016/6/15 ~ 2016/12/15</li>
+</ul>
+<p>under the parameters of mature model.</p>
+<p>In calibration, we obtained 2.4% of return rate in 6 months, which is roughly 5% annualized return rate. On the other hand, we undertook a -5.5% drawdown, which lasted for nerely 3 months (from December 2015 to March 2016).</p>
+<p>In forward testing, we achieved 8% of return rate in 6 months, that is roughly 16.6% annualized return rate. However, we sufferred from a -4% drawdown beginning in August 2016, ending in November 2016, resulting a total duration of 3 months.</p>
+<p>As can be seen, we could predict drawdown value and duration from calibration results. And fortunately, we gained a much better profit in forward testing than in calibration. This <em>gift</em>, as shall be deemed, could be due to market itself. In fact, during the first 6 months (calibration), market was experiencing a relatively high volatility (roughly 2%), while in the last 6 months (forward testing), it becomed more mild, having a relatively low volatility 0.8%.</p>
+<p>So in summary, we may draw this conclusion:</p>
+<ul class="simple">
+<li>Under the parameters from calibration, when we are dealing with less violent market in practice, we could expect a better return rate.</li>
+</ul>
+<p>So my future works may be:</p>
+<ul class="simple">
+<li>Verify that this strategy indeed has the above property, that behaves better in mild market.</li>
+<li>Study the performance of strategy in more violent market situation, see if it will underperform.</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../change/log_index.html" class="btn btn-neutral float-right" title="Change Log" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="May30.html" class="btn btn-neutral" title="Wed 30 May 2018" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, RockmanZheng.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
