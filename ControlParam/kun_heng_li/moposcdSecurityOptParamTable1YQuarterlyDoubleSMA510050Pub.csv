@@ -1,8 +1,7 @@
 code,state,initvalue,upperbound,lowerbound,baseunit,note,index
-dummy,off,1,1,0,0,paramtobeopt,local
-LossTolerance,on,1,1,0.01,0,paramtobeopt,local
-FastSMAPeriod,on,60,90,1,0,paramtobeopt,local
-PeriodDiff,on,60,90,1,0,paramtobeopt,local
+Variable,off,0,1,-1,0,paramtobeopt,local
+ShortBarsBack,on,5,100,5,0,paramtobeopt,local
+IncrementBarsBack,on,15,100,5,0,paramtobeopt,local
 checkrunoutputstatusmakeup,none,true&full,none,none,none,optcontrolparam,local
 checkrunoutputstatus,none,TRUE,none,none,none,optcontrolparam,local
 outputdir,none,.\..\ControlStation\OutputData\OptInfoTest,none,none,none,optcontrolparam,local
@@ -13,7 +12,7 @@ orderparamfileheader,none,local,none,none,none,optcontrolparam,local
 testcase,none,backtestingengine,none,none,none,optcontrolparam,local
 calccase,use,-1,all,all,none,optcontrolparam,local
 function,none,100,none,none,none,optcontrolparam,local
-popsize,none,1,none,none,none,optcontrolparam,local
+popsize,none,5,none,none,none,optcontrolparam,local
 maxgen,none,1,none,none,none,optcontrolparam,local
 optimization,none,1,none,none,none,optcontrolparam,local
 archive_size,none,5,none,none,none,optcontrolparam,local
